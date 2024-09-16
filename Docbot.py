@@ -9,16 +9,16 @@ import time
 
 import numpy as np
 import pandas as pd
-import mysql.connector as m
-conn = m.connect(user='root', password='Chaitanya@2003',host='127.0.0.1',database ='patient')
-cursor = conn.cursor()
+import mysql.connector
 
-show = "SHOW DATABASES"
-cursor.execute(show)
-print(cursor)
-for db in cursor.fetchall():
-    print(db)
-
+# Establishing the connection
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Rishi@2004",
+    database="patient"
+)
+mydb.close()
 
 
 
